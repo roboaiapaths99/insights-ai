@@ -1,0 +1,14 @@
+# ============================================
+# Global Streamlit Theme Configuration
+# ============================================
+
+[theme]
+# Default theme (light)
+base="light"
+primaryColor="#2E86DE"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F5F7FA"
+textColor="#1E1E1E"
+font="sans serif"
+
+# Optional dark theme (manual toggle below)

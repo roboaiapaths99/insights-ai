@@ -1,0 +1,35 @@
+[
+  {
+    "admission_no": "GVPS-6A-001",
+    "exam_name": "Final",
+    "exam_date": "2026-03-05",
+    "max_score": 100,
+    "scores": {
+      "Maths": 84.0,
+      "Science": 71.0,
+      "English": 85.0
+    }
+  },
+  {
+    "admission_no": "GVPS-6A-002",
+    "exam_name": "Final",
+    "exam_date": "2026-03-05",
+    "max_score": 100,
+    "scores": {
+      "Maths": 81.0,
+      "Science": 74.0,
+      "English": 78.0
+    }
+  },
+  {
+    "admission_no": "GVPS-6A-003",
+    "exam_name": "Final",
+    "exam_date": "2026-03-05",
+    "max_score": 100,
+    "scores": {
+      "Maths": 69.0,
+      "Science": 58.0,
+      "English": 62.0
+    }
+  }
+]
