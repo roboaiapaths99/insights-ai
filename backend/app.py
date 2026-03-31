@@ -7,10 +7,10 @@ from db.init_db import init_db
 
 app = FastAPI(title=settings.PROJECT_NAME)
 
-# Allow all origins for dev
+# CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=settings.CORS_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

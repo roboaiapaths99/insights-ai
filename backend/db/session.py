@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 
 from core.config import settings
 
-DB_URL = getattr(settings, "DB_URL", None) or getattr(settings, "DATABASE_URL", None) or "sqlite:///./academics_insights.db"
+DB_URL = settings.DATABASE_URL
 
 connect_args = {}
 if DB_URL.startswith("sqlite"):
