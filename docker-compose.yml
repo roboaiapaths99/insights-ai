@@ -24,35 +24,24 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    ports:
+      - "8000:8000"
     environment:
       DATABASE_URL: postgresql://admin:admin123@db:5432/academics_db
       OPENAI_API_KEY: ${OPENAI_API_KEY}
       OPENAI_MODEL: ${OPENAI_MODEL}
       JWT_SECRET_KEY: ${JWT_SECRET_KEY}
       CORS_ORIGINS: '["http://insights.agpkacademy.in", "https://insights.agpkacademy.in"]'
-    volumes:
-      - ./backend:/app # For development/hot-reload (remove for pure prod)
 
   frontend:
     build: ./frontend
     container_name: academics_insights_frontend
     restart: always
+    ports:
+      - "8501:8501"
     environment:
       API_URL: http://insights.agpkacademy.in/api
     depends_on:
-      - backend
-
-  nginx:
-    image: nginx:stable-alpine
-    container_name: academics_insights_nginx
-    restart: always
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-    depends_on:
-      - frontend
       - backend
 
 volumes:
