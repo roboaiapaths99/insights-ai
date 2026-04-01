@@ -1268,6 +1268,11 @@ def fetch_students():
 
 
 students = fetch_students()
+
+if not students:
+    st.info("No students are mapped to your account yet. Please contact the school administrator.")
+    st.stop()
+
 student_map = {f"{s['name']} (Grade {s['grade']}{s['section']})": s["id"] for s in students}
 
 st.sidebar.markdown("**Demo School:** Green Valley Public School")
