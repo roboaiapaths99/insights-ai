@@ -40,7 +40,7 @@ services:
     ports:
       - "8003:8501"
     environment:
-      API_URL: http://insights.agpkacademy.in/api
+      API_URL: http://backend:8000
     depends_on:
       - backend
 
